@@ -1,0 +1,8 @@
+opencv-python
+pytesseract
+pandas
+numpy
+flask
+sqlalchemy
+python-dotenv
+
