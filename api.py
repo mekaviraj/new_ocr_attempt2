@@ -15,6 +15,7 @@ from save_results import save_row
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -443,6 +444,7 @@ def index():
                 <button type="submit">🔍 Upload & Process</button>
             </form>
             
+            
             <div class="features">
                 <strong>✨ Features:</strong>
                 <ul>
@@ -539,6 +541,11 @@ def process():
         </html>
         """
         return resp
+    return redirect(url_for('index'))
+
+
+@app.route('/test', methods=['GET'])
+def test():
     return redirect(url_for('index'))
 
 
